@@ -86,7 +86,7 @@ public class TextFieldBehavior extends TextInputControlBehavior<TextField> {
                 if (!focusGainedByMouseClick) {
                     textField.selectRange(textField.getLength(), 0);
                 }
-            } else {
+            }else /*START MS EDIT*/if(oldValue == textField)/*END MS EDIT--> see also https://bugs.openjdk.org/browse/JDK-8210297*/ {
                 textField.selectRange(0, 0);
             }
         };
