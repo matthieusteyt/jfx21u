@@ -69,8 +69,11 @@ public class TabPaneBehavior extends BehaviorBase<TabPane> {
             new KeyMapping(new KeyBinding(PAGE_UP).ctrl(), e -> selectPreviousTab()),
             new KeyMapping(new KeyBinding(PAGE_DOWN).ctrl(), e -> selectNextTab()),
             new KeyMapping(new KeyBinding(TAB).ctrl(), e -> selectNextTab()),
-            new KeyMapping(new KeyBinding(TAB).ctrl().shift(), e -> selectPreviousTab()),
-            new MouseMapping(MouseEvent.MOUSE_PRESSED, e -> getNode().requestFocus())
+            new KeyMapping(new KeyBinding(TAB).ctrl().shift(), e -> selectPreviousTab())
+                /*START MS EDIT*/
+                /*,
+            new MouseMapping(MouseEvent.MOUSE_PRESSED, e -> getNode().requestFocus())*/
+                /*END MS EDIT*/
         );
     }
 
