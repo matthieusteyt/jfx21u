@@ -11,3 +11,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build
 --> build with ./gradlew
 --> generate javadoc with ./gradlew javadoc
 --> publish to local maven with ./gradlew publishToMavenLocal (version with date/time is automatically generated)
+
+GIT INSTRUCTIONS
+----------------
+- Implement code changes under customize branch
+
+- Get commits from openjdk codebase
+-- Update remote master (matthieusteyt/jfx21u:master) with upstream openjdk/jfx21u:master on github (sync fork)
+-- locally rebase customize branch onto master (gets all updates from master and reapplies own commits)
+-- use push --force to push to matthieusteyt/jfx21u:customize
