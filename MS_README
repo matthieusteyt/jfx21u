@@ -1,0 +1,13 @@
+BUILD INSTRUCTIONS
+------------------
+- See https://wiki.openjdk.java.net/display/OpenJFX/Building+OpenJFX
+--> set environment variable in windows (should point to directory with vcvars32.bat in it), necessary to build buildSrc (generates windows_tools.properties)
+VS150COMNTOOLS
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build
+
+--> add patches (oa to build.gradle)
+--> activate publish tasks with gradle.properties file with line 'MAVEN_PUBLISH = true'
+--> build with a previous version of the jdk, if needed export JAVA_HOME -> export JAVA_HOME="C:\Program Files\Java\jdk-XX"
+--> build with ./gradlew
+--> generate javadoc with ./gradlew javadoc
+--> publish to local maven with ./gradlew publishToMavenLocal (version with date/time is automatically generated)
